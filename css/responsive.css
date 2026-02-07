@@ -1,0 +1,544 @@
+@media (max-width: 1023px) {
+
+    h1,
+    .hero-headline {
+        font-size: 52px !important;
+    }
+
+    h2,
+    .section-title {
+        font-size: 38px !important;
+    }
+
+    .section {
+        padding: 80px 2rem;
+    }
+
+    .hero-stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .comparison-header,
+    .comparison-row-item {
+        gap: 2rem;
+    }
+
+    .problem-grid,
+    .usp-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .shape-1 {
+        width: 300px;
+        height: 300px;
+    }
+
+    .shape-2 {
+        width: 350px;
+        height: 350px;
+    }
+
+    .shape-3 {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    h1,
+    .hero-headline {
+        font-size: 36px !important;
+    }
+
+    h2,
+    .section-title {
+        font-size: 28px !important;
+    }
+
+    .nav-container {
+        padding: 0 1rem;
+        height: 64px;
+    }
+
+    .nav-logo {
+        font-size: 20px;
+    }
+
+    .nav-logo-img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .section {
+        padding: 60px 1.25rem;
+    }
+
+    .section-subtitle {
+        font-size: 16px;
+        margin-bottom: 2.5rem;
+    }
+
+    .hero-section {
+        padding: 100px 1.25rem 60px;
+        min-height: auto;
+    }
+
+    .hero-subheadline {
+        font-size: 16px;
+    }
+
+    .hero-badge {
+        font-size: 13px;
+        padding: 0.5rem 1rem;
+    }
+
+    .hero-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .hero-stat-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .stat-value {
+        font-size: 36px;
+    }
+
+    .problem-grid,
+    .services-grid,
+    .usp-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .glass-card,
+    .glass-card-premium,
+    .glass-card-highlight {
+        padding: 1.5rem;
+    }
+
+    .problem-card {
+        padding: 1.5rem;
+    }
+
+    .problem-icon {
+        font-size: 48px;
+        margin-bottom: 1rem;
+    }
+
+    .problem-conclusion {
+        padding: 2rem 1.5rem;
+    }
+
+    .conclusion-stat {
+        font-size: 48px;
+    }
+
+    .step-number {
+        width: 48px;
+        height: 48px;
+        font-size: 22px;
+    }
+
+    .step-content {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .step-connector {
+        height: 30px;
+    }
+
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .service-icon-wrapper {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 1rem;
+    }
+
+    .service-icon {
+        font-size: 28px;
+    }
+
+
+    .usp-card {
+        padding: 2rem;
+    }
+
+    .usp-icon-wrapper {
+        width: 64px;
+        height: 64px;
+    }
+
+    .usp-icon {
+        font-size: 32px;
+    }
+
+
+    .comparison-header {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .comparison-row-item {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .comparison-col.glass-card {
+        padding: 1rem 1.25rem;
+    }
+
+    .col-header {
+        padding: 1rem;
+    }
+
+    .col-icon {
+        font-size: 24px;
+    }
+
+    .benefit-emoji {
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+    }
+
+    .benefit-info strong {
+        font-size: 15px;
+    }
+
+    .benefit-info span {
+        font-size: 13px;
+    }
+
+    .comparison-row-item .requester-col::before {
+        content: "👤 Requester";
+        display: block;
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--color-primary);
+        margin-bottom: 0.5rem;
+        opacity: 0.8;
+    }
+
+    .comparison-row-item .tasker-col::before {
+        content: "💼 Tasker";
+        display: block;
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--color-primary);
+        margin-bottom: 0.5rem;
+        opacity: 0.8;
+    }
+
+
+    .comparison-header {
+        display: none;
+    }
+
+
+    .footer {
+        padding: 2.5rem 1.25rem;
+    }
+
+    .footer-container {
+        gap: 1.5rem;
+    }
+
+    .footer-brand h3 {
+        font-size: 24px;
+    }
+
+    .shape-1 {
+        width: 200px;
+        height: 200px;
+        opacity: 0.3;
+    }
+
+    .shape-2 {
+        width: 250px;
+        height: 250px;
+        opacity: 0.25;
+    }
+
+    .shape-3 {
+        width: 220px;
+        height: 220px;
+        opacity: 0.2;
+    }
+}
+
+
+@media (max-width: 479px) {
+
+    h1,
+    .hero-headline {
+        font-size: 28px !important;
+    }
+
+    h2,
+    .section-title {
+        font-size: 24px !important;
+    }
+
+    .nav-container {
+        height: 56px;
+        padding: 0 0.75rem;
+    }
+
+    .nav-logo-text {
+        font-size: 18px;
+    }
+
+    .nav-logo-img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .section {
+        padding: 40px 1rem;
+    }
+
+    .hero-section {
+        padding: 80px 1rem 40px;
+    }
+
+    .hero-badge {
+        font-size: 12px;
+        padding: 0.4rem 0.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-subheadline {
+        font-size: 15px;
+        margin-bottom: 2rem;
+    }
+
+    .hero-stats-grid {
+        margin-top: 2rem;
+    }
+
+    .stat-value {
+        font-size: 32px;
+    }
+
+    .stat-label {
+        font-size: 13px;
+    }
+
+    .glass-card,
+    .glass-card-premium {
+        padding: 1.25rem;
+        border-radius: 16px;
+    }
+
+    .problem-card {
+        padding: 1.25rem;
+    }
+
+    .problem-icon {
+        font-size: 40px;
+    }
+
+    .problem-title {
+        font-size: 18px;
+    }
+
+    .problem-desc {
+        font-size: 14px;
+    }
+
+    .conclusion-stat {
+        font-size: 40px;
+    }
+
+    .conclusion-text {
+        font-size: 15px;
+    }
+
+
+    .step-item {
+        gap: 1rem;
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .step-content {
+        padding: 1rem 1.25rem;
+    }
+
+    .step-title {
+        font-size: 16px;
+    }
+
+    .step-desc {
+        font-size: 14px;
+    }
+
+
+    .service-title {
+        font-size: 18px;
+    }
+
+    .service-list li {
+        font-size: 14px;
+        padding: 0.35rem 0;
+    }
+
+
+    .usp-card {
+        padding: 1.5rem;
+    }
+
+    .usp-icon-wrapper {
+        width: 56px;
+        height: 56px;
+    }
+
+    .usp-icon {
+        font-size: 28px;
+    }
+
+    .usp-title {
+        font-size: 18px;
+    }
+
+    .usp-desc {
+        font-size: 14px;
+    }
+
+    .usp-stat-badge {
+        font-size: 11px;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .comparison-table {
+        margin-top: 1rem;
+    }
+
+    .comparison-row {
+        font-size: 13px;
+        padding: 0.5rem 0.75rem;
+    }
+
+
+    .comparison-col.glass-card {
+        padding: 1rem;
+    }
+
+    .benefit-cell {
+        gap: 0.75rem;
+    }
+
+    .benefit-emoji {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    .benefit-info strong {
+        font-size: 14px;
+    }
+
+    .benefit-info span {
+        font-size: 12px;
+    }
+
+
+    .footer {
+        padding: 2rem 1rem;
+    }
+
+    .footer-brand h3 {
+        font-size: 20px;
+    }
+
+    .footer-brand p,
+    .footer-contact p {
+        font-size: 14px;
+    }
+
+    .footer-copyright {
+        font-size: 12px;
+    }
+
+
+    .floating-shapes {
+        opacity: 0.15;
+    }
+
+    .shape {
+        filter: blur(100px);
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
+    .glass-card,
+    .glass-card-premium {
+        backdrop-filter: blur(28px) saturate(180%);
+        -webkit-backdrop-filter: blur(28px) saturate(180%);
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+
+    .glass-card:hover,
+    .glass-card-premium:hover,
+    .problem-card:hover,
+    .service-card:hover,
+    .usp-card:hover,
+    .hero-stat-card:hover {
+        transform: none;
+    }
+
+    .glass-card:active,
+    .problem-card:active,
+    .service-card:active {
+        transform: scale(0.98);
+    }
+
+
+    .nav-links a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+    .hero-section {
+        min-height: auto;
+        padding: 80px 2rem 40px;
+    }
+
+    .hero-stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
