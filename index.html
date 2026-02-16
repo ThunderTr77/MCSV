@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiniJob - Dịch vụ nhỏ cho sinh viên</title>
+    <title>Viecz - Dịch vụ nhỏ cho sinh viên</title>
     <meta name="description" content="Nền tảng kết nối sinh viên cần hỗ trợ với những bạn muốn kiếm thêm thu nhập">
     <link rel="icon" href="assets/images/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,6 +15,9 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
@@ -22,7 +25,35 @@
 </head>
 
 <body>
-    <div class="scroll-progress"></div>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-bg-shapes">
+            <div class="preloader-orb preloader-orb-1"></div>
+            <div class="preloader-orb preloader-orb-2"></div>
+            <div class="preloader-orb preloader-orb-3"></div>
+        </div>
+        <div class="preloader-content">
+            <div class="preloader-logo-ring">
+                <svg class="preloader-spinner" viewBox="0 0 120 120">
+                    <circle class="spinner-track" cx="60" cy="60" r="54"></circle>
+                    <circle class="spinner-fill" cx="60" cy="60" r="54"></circle>
+                </svg>
+                <img src="assets/images/logo.png" alt="Viecz" class="preloader-logo">
+            </div>
+            <span class="preloader-text">Viecz</span>
+            <div class="preloader-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-progress">
+        <div class="scroll-progress-logo">
+            <img src="assets/images/logo.png" alt="" class="scroll-logo-img">
+        </div>
+    </div>
     <div class="gradient-mesh"></div>
     <div class="floating-shapes">
         <div class="shape shape-1"></div>
@@ -33,8 +64,8 @@
     <nav class="nav-glass">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="assets/images/logo.png" alt="MiniJob" class="nav-logo-img">
-                <span class="nav-logo-text">MiniJob</span>
+                <img src="assets/images/logo.png" alt="Viecz" class="nav-logo-img">
+                <span class="nav-logo-text">Viecz</span>
             </div>
             <ul class="nav-links">
                 <li><a href="#problem">Vấn đề</a></li>
@@ -65,27 +96,27 @@
 
     <section class="hero-section">
         <div class="hero-container">
-            <div class="hero-badge glass-badge">
-                <span>🎓</span>
+            <div class="hero-badge glass-badge reveal-element">
+                <ion-icon name="school-outline" class="badge-icon"></ion-icon>
                 <span>P2P Marketplace cho Sinh Viên</span>
             </div>
-            <h1 class="hero-headline liquid-text">
+            <h1 class="hero-headline liquid-text reveal-element">
                 Dịch vụ nhỏ<br>
                 cho sinh viên
             </h1>
-            <p class="hero-subheadline">
+            <p class="hero-subheadline reveal-element">
                 Nền tảng kết nối sinh viên cần hỗ trợ với những bạn muốn kiếm thêm thu nhập
             </p>
             <div class="hero-stats-grid">
-                <div class="hero-stat-card glass-card">
+                <div class="hero-stat-card glass-card reveal-element">
                     <div class="stat-value liquid-text">100K+</div>
                     <div class="stat-label">Sinh viên ĐHQG-HCM</div>
                 </div>
-                <div class="hero-stat-card glass-card">
+                <div class="hero-stat-card glass-card reveal-element">
                     <div class="stat-value liquid-text">10%</div>
                     <div class="stat-label">Phí dịch vụ thấp nhất</div>
                 </div>
-                <div class="hero-stat-card glass-card">
+                <div class="hero-stat-card glass-card reveal-element">
                     <div class="stat-value liquid-text">24/7</div>
                     <div class="stat-label">Sẵn sàng hỗ trợ</div>
                 </div>
@@ -93,13 +124,20 @@
         </div>
     </section>
 
+    <!-- Section Divider -->
+    <div class="section-divider">
+        <div class="divider-line"></div>
+        <div class="divider-icon"><ion-icon name="chevron-down-outline"></ion-icon></div>
+        <div class="divider-line"></div>
+    </div>
+
     <section id="problem" class="section problem-section">
         <div class="section-container">
-            <h2 class="section-title liquid-text">Bạn đang gặp phải những tình huống này?</h2>
+            <h2 class="section-title liquid-text reveal-element">Bạn đang gặp phải những tình huống này?</h2>
 
             <div class="problem-grid">
-                <div class="problem-card glass-card" data-tilt>
-                    <div class="problem-icon">⏰</div>
+                <div class="problem-card glass-card reveal-element" data-tilt>
+                    <div class="problem-icon"><ion-icon name="alarm-outline"></ion-icon></div>
                     <h3 class="problem-title">Deadline "dí"</h3>
                     <p class="problem-desc">
                         23h đêm cần in bài gấp nhưng tiệm photo đóng cửa.
@@ -107,8 +145,8 @@
                     </p>
                 </div>
 
-                <div class="problem-card glass-card" data-tilt>
-                    <div class="problem-icon">📚</div>
+                <div class="problem-card glass-card reveal-element" data-tilt>
+                    <div class="problem-icon"><ion-icon name="book-outline"></ion-icon></div>
                     <h3 class="problem-title">"Đói mà bận"</h3>
                     <p class="problem-desc">
                         Đang ôn thi trong thư viện giờ cao điểm.
@@ -116,8 +154,8 @@
                     </p>
                 </div>
 
-                <div class="problem-card glass-card" data-tilt>
-                    <div class="problem-icon">💰</div>
+                <div class="problem-card glass-card reveal-element" data-tilt>
+                    <div class="problem-icon"><ion-icon name="wallet-outline"></ion-icon></div>
                     <h3 class="problem-title">Muốn kiếm tiền nhưng kẹt lịch</h3>
                     <p class="problem-desc">
                         Rảnh 30 phút giữa giờ học nhưng không thể làm part-time ca cố định 4 tiếng.
@@ -126,26 +164,33 @@
                 </div>
             </div>
 
-            <div class="problem-conclusion glass-card-highlight">
+            <div class="problem-conclusion glass-card-highlight reveal-element">
                 <div class="conclusion-stat-wrapper">
                     <div class="conclusion-stat liquid-text">78%</div>
                     <div class="conclusion-badge">Từ khảo sát thực tế</div>
                 </div>
                 <p class="conclusion-text">
                     <strong>sinh viên đang phải tự làm mọi việc vặt</strong> dù rất bận rộn.
-                    <br>MiniJob sinh ra để thay đổi điều đó.
+                    <br>Viecz sinh ra để thay đổi điều đó.
                 </p>
             </div>
         </div>
     </section>
 
+    <!-- Section Divider -->
+    <div class="section-divider">
+        <div class="divider-line"></div>
+        <div class="divider-icon"><ion-icon name="arrow-down-outline"></ion-icon></div>
+        <div class="divider-line"></div>
+    </div>
+
     <section id="solution" class="section solution-section">
         <div class="section-container">
-            <h2 class="section-title liquid-text">Giải quyết mọi việc chỉ với 5 bước</h2>
-            <p class="section-subtitle">Trên điện thoại, đơn giản và nhanh chóng</p>
+            <h2 class="section-title liquid-text reveal-element">Giải quyết mọi việc chỉ với 5 bước</h2>
+            <p class="section-subtitle reveal-element">Trên điện thoại, đơn giản và nhanh chóng</p>
 
             <div class="steps-timeline">
-                <div class="step-item" data-step="1">
+                <div class="step-item reveal-element" data-step="1">
                     <div class="step-number-wrapper">
                         <div class="step-number">1</div>
                         <div class="step-connector"></div>
@@ -156,7 +201,7 @@
                     </div>
                 </div>
 
-                <div class="step-item" data-step="2">
+                <div class="step-item reveal-element" data-step="2">
                     <div class="step-number-wrapper">
                         <div class="step-number">2</div>
                         <div class="step-connector"></div>
@@ -167,7 +212,7 @@
                     </div>
                 </div>
 
-                <div class="step-item" data-step="3">
+                <div class="step-item reveal-element" data-step="3">
                     <div class="step-number-wrapper">
                         <div class="step-number">3</div>
                         <div class="step-connector"></div>
@@ -178,7 +223,7 @@
                     </div>
                 </div>
 
-                <div class="step-item" data-step="4">
+                <div class="step-item reveal-element" data-step="4">
                     <div class="step-number-wrapper">
                         <div class="step-number">4</div>
                         <div class="step-connector"></div>
@@ -189,7 +234,7 @@
                     </div>
                 </div>
 
-                <div class="step-item" data-step="5">
+                <div class="step-item reveal-element" data-step="5">
                     <div class="step-number-wrapper">
                         <div class="step-number">5</div>
                     </div>
@@ -202,14 +247,21 @@
         </div>
     </section>
 
+    <!-- Section Divider -->
+    <div class="section-divider">
+        <div class="divider-line"></div>
+        <div class="divider-icon"><ion-icon name="grid-outline"></ion-icon></div>
+        <div class="divider-line"></div>
+    </div>
+
     <section id="services" class="section services-section">
         <div class="section-container">
-            <h2 class="section-title liquid-text">Đa dạng dịch vụ cho đời sống sinh viên</h2>
+            <h2 class="section-title liquid-text reveal-element">Đa dạng dịch vụ cho đời sống sinh viên</h2>
 
             <div class="services-grid">
-                <div class="service-card glass-card" data-tilt>
+                <div class="service-card glass-card reveal-element" data-tilt>
                     <div class="service-icon-wrapper">
-                        <div class="service-icon">📦</div>
+                        <div class="service-icon"><ion-icon name="cube-outline"></ion-icon></div>
                     </div>
                     <h3 class="service-title">Vận chuyển & Mua hộ</h3>
                     <ul class="service-list">
@@ -219,9 +271,9 @@
                     </ul>
                 </div>
 
-                <div class="service-card glass-card" data-tilt>
+                <div class="service-card glass-card reveal-element" data-tilt>
                     <div class="service-icon-wrapper">
-                        <div class="service-icon">🖨️</div>
+                        <div class="service-icon"><ion-icon name="print-outline"></ion-icon></div>
                     </div>
                     <h3 class="service-title">Hỗ trợ học tập</h3>
                     <ul class="service-list">
@@ -231,9 +283,9 @@
                     </ul>
                 </div>
 
-                <div class="service-card glass-card" data-tilt>
+                <div class="service-card glass-card reveal-element" data-tilt>
                     <div class="service-icon-wrapper">
-                        <div class="service-icon">💻</div>
+                        <div class="service-icon"><ion-icon name="laptop-outline"></ion-icon></div>
                     </div>
                     <h3 class="service-title">Dịch vụ kỹ năng</h3>
                     <ul class="service-list">
@@ -243,9 +295,9 @@
                     </ul>
                 </div>
 
-                <div class="service-card glass-card" data-tilt>
+                <div class="service-card glass-card reveal-element" data-tilt>
                     <div class="service-icon-wrapper">
-                        <div class="service-icon">🧹</div>
+                        <div class="service-icon"><ion-icon name="home-outline"></ion-icon></div>
                     </div>
                     <h3 class="service-title">Đời sống</h3>
                     <ul class="service-list">
@@ -258,14 +310,22 @@
         </div>
     </section>
 
+    <!-- Section Divider -->
+    <div class="section-divider">
+        <div class="divider-line"></div>
+        <div class="divider-icon"><ion-icon name="star-outline"></ion-icon></div>
+        <div class="divider-line"></div>
+    </div>
+
     <section id="why-us" class="section why-section">
         <div class="section-container">
-            <h2 class="section-title liquid-text">Nền tảng tin cậy dành riêng cho cộng đồng sinh viên</h2>
+            <h2 class="section-title liquid-text reveal-element">Nền tảng tin cậy dành riêng cho cộng đồng sinh viên
+            </h2>
 
             <div class="usp-grid">
-                <div class="usp-card glass-card-premium" data-tilt>
+                <div class="usp-card glass-card-premium reveal-element" data-tilt>
                     <div class="usp-icon-wrapper">
-                        <div class="usp-icon">🔒</div>
+                        <div class="usp-icon"><ion-icon name="shield-checkmark-outline"></ion-icon></div>
                     </div>
                     <h3 class="usp-title">An toàn tuyệt đối</h3>
                     <p class="usp-desc">
@@ -275,9 +335,9 @@
                     <div class="usp-stat-badge">57% sinh viên mong muốn tính năng này</div>
                 </div>
 
-                <div class="usp-card glass-card-premium" data-tilt>
+                <div class="usp-card glass-card-premium reveal-element" data-tilt>
                     <div class="usp-icon-wrapper">
-                        <div class="usp-icon">💸</div>
+                        <div class="usp-icon"><ion-icon name="cash-outline"></ion-icon></div>
                     </div>
                     <h3 class="usp-title">Chi phí siêu rẻ</h3>
                     <p class="usp-desc">
@@ -287,13 +347,13 @@
                     <div class="comparison-table">
                         <div class="comparison-row">Grab: <span>27%</span></div>
                         <div class="comparison-row">TaskRabbit: <span>22.5%</span></div>
-                        <div class="comparison-row highlight">MiniJob: <span>10%</span></div>
+                        <div class="comparison-row highlight">Viecz: <span>10%</span></div>
                     </div>
                 </div>
 
-                <div class="usp-card glass-card-premium" data-tilt>
+                <div class="usp-card glass-card-premium reveal-element" data-tilt>
                     <div class="usp-icon-wrapper">
-                        <div class="usp-icon">🎓</div>
+                        <div class="usp-icon"><ion-icon name="people-outline"></ion-icon></div>
                     </div>
                     <h3 class="usp-title">Tin cậy & Gần gũi</h3>
                     <p class="usp-desc">
@@ -305,31 +365,38 @@
         </div>
     </section>
 
+    <!-- Section Divider -->
+    <div class="section-divider">
+        <div class="divider-line"></div>
+        <div class="divider-icon"><ion-icon name="heart-outline"></ion-icon></div>
+        <div class="divider-line"></div>
+    </div>
+
     <section id="benefits" class="section benefits-section">
         <div class="section-container">
-            <h2 class="section-title liquid-text">Lợi ích cho Tasker và Requester</h2>
+            <h2 class="section-title liquid-text reveal-element">Lợi ích cho Tasker và Requester</h2>
 
 
             <div class="benefits-comparison">
-                <div class="comparison-header">
+                <div class="comparison-header reveal-element">
                     <div class="comparison-col requester-col">
                         <div class="col-header glass-card-accent">
-                            <span class="col-icon">👤</span>
+                            <ion-icon name="person-outline" class="col-icon"></ion-icon>
                             <span class="col-label">Requester</span>
                         </div>
                     </div>
                     <div class="comparison-col tasker-col">
                         <div class="col-header glass-card-accent">
-                            <span class="col-icon">💼</span>
+                            <ion-icon name="briefcase-outline" class="col-icon"></ion-icon>
                             <span class="col-label">Tasker</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="comparison-row-item">
+                <div class="comparison-row-item reveal-element">
                     <div class="comparison-col requester-col glass-card">
                         <div class="benefit-cell">
-                            <span class="benefit-emoji">⚡</span>
+                            <span class="benefit-emoji"><ion-icon name="flash-outline"></ion-icon></span>
                             <div class="benefit-info">
                                 <strong>Nhanh hơn</strong>
                                 <span>Tiết kiệm thời gian</span>
@@ -338,7 +405,7 @@
                     </div>
                     <div class="comparison-col tasker-col glass-card">
                         <div class="benefit-cell">
-                            <span class="benefit-emoji">⏰</span>
+                            <span class="benefit-emoji"><ion-icon name="time-outline"></ion-icon></span>
                             <div class="benefit-info">
                                 <strong>Thu nhập linh hoạt</strong>
                                 <span>Kiếm tiền trong thời gian rảnh</span>
@@ -348,10 +415,10 @@
                 </div>
 
 
-                <div class="comparison-row-item">
+                <div class="comparison-row-item reveal-element">
                     <div class="comparison-col requester-col glass-card">
                         <div class="benefit-cell">
-                            <span class="benefit-emoji">💰</span>
+                            <span class="benefit-emoji"><ion-icon name="pricetag-outline"></ion-icon></span>
                             <div class="benefit-info">
                                 <strong>Rẻ hơn</strong>
                                 <span>Tiết kiệm hơn so với Grab</span>
@@ -360,7 +427,7 @@
                     </div>
                     <div class="comparison-col tasker-col glass-card">
                         <div class="benefit-cell">
-                            <span class="benefit-emoji">💵</span>
+                            <span class="benefit-emoji"><ion-icon name="trending-up-outline"></ion-icon></span>
                             <div class="benefit-info">
                                 <strong>Giữ được nhiều hơn</strong>
                                 <span>Chỉ mất 10% phí, không phải 20%</span>
@@ -370,10 +437,10 @@
                 </div>
 
 
-                <div class="comparison-row-item">
+                <div class="comparison-row-item reveal-element">
                     <div class="comparison-col requester-col glass-card">
                         <div class="benefit-cell">
-                            <span class="benefit-emoji">🔒</span>
+                            <span class="benefit-emoji"><ion-icon name="lock-closed-outline"></ion-icon></span>
                             <div class="benefit-info">
                                 <strong>An toàn hơn</strong>
                                 <span>Ký quỹ bảo vệ, đánh giá minh bạch</span>
@@ -382,7 +449,7 @@
                     </div>
                     <div class="comparison-col tasker-col glass-card">
                         <div class="benefit-cell">
-                            <span class="benefit-emoji">🎯</span>
+                            <span class="benefit-emoji"><ion-icon name="apps-outline"></ion-icon></span>
                             <div class="benefit-info">
                                 <strong>Đa dạng công việc</strong>
                                 <span>Từ việc vặt đến dịch vụ chuyên môn</span>
@@ -397,7 +464,7 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-brand">
-                <h3 class="liquid-text">MiniJob</h3>
+                <h3 class="liquid-text">Viecz</h3>
                 <p>P2P Marketplace cho sinh viên</p>
             </div>
 
@@ -406,12 +473,11 @@
             </div>
 
             <div class="footer-copyright">
-                <p>&copy; 2026 MiniJob Team</p>
+                <p>&copy; 2026 Viecz Team</p>
             </div>
         </div>
     </footer>
 
-    <!-- <script src="js/animations.js"></script> -->
     <script src="js/main.js"></script>
 </body>
 
