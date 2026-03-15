@@ -199,10 +199,67 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Hero content parallax — text layer moves slightly slower than background
+    const heroParallax = document.querySelector('.hero-content-parallax');
+    if (heroParallax && !isMobile) {
+        gsap.to(heroParallax, {
+            y: -70,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.hero-section',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: 1.2
+            }
+        });
+    }
+
     const navLogoLink = document.getElementById('nav-logo-link');
     if (navLogoLink) {
         navLogoLink.addEventListener('click', function (e) {
             e.preventDefault();
+            gsap.to(window, {
+                scrollTo: { y: 0, autoKill: false },
+                duration: 1,
+                ease: 'power3.inOut'
+            });
+        });
+    }
+
+    // Scroll-to-top button
+    const scrollTopBtn = document.getElementById('scroll-top-btn');
+    if (scrollTopBtn) {
+        let scrollTopVisible = false;
+        const showScrollTop = () => {
+            if (!scrollTopVisible) {
+                scrollTopVisible = true;
+                gsap.to(scrollTopBtn, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.4,
+                    ease: 'power3.out',
+                    pointerEvents: 'auto'
+                });
+                scrollTopBtn.style.pointerEvents = 'auto';
+            }
+        };
+        const hideScrollTop = () => {
+            if (scrollTopVisible) {
+                scrollTopVisible = false;
+                gsap.to(scrollTopBtn, {
+                    opacity: 0,
+                    y: 16,
+                    duration: 0.3,
+                    ease: 'power3.in'
+                });
+                scrollTopBtn.style.pointerEvents = 'none';
+            }
+        };
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 400) showScrollTop();
+            else hideScrollTop();
+        }, { passive: true });
+        scrollTopBtn.addEventListener('click', () => {
             gsap.to(window, {
                 scrollTo: { y: 0, autoKill: false },
                 duration: 1,
@@ -716,12 +773,24 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
+            // Fix mobile nav race condition: close menu before scrolling
+            if (mobileMenu && mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                hamburger && hamburger.classList.remove('active');
+                setTimeout(() => {
+                    mobileMenu.style.display = 'none';
+                    document.body.style.overflow = '';
+                }, 250);
+            }
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                gsap.to(window, {
-                    duration: 0.8,
-                    scrollTo: { y: target, offsetY: 80 },
-                    ease: 'power3.inOut'
+                const delay = mobileMenu && !mobileMenu.classList.contains('active') ? 0.26 : 0;
+                gsap.delayedCall(delay, () => {
+                    gsap.to(window, {
+                        duration: 0.8,
+                        scrollTo: { y: target, offsetY: 80 },
+                        ease: 'power3.inOut'
+                    });
                 });
             }
         });

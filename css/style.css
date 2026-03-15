@@ -1802,3 +1802,69 @@ button {
 .glass-card-premium.glow-border-animate {
     animation: borderGlow 2s ease-in-out 1;
 }
+
+/* ============================================
+   SCROLL TO TOP BUTTON
+   ============================================ */
+
+.scroll-top-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 999;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(50, 184, 198, 0.45);
+    background: rgba(252, 252, 249, 0.18);
+    backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+    color: var(--color-primary, #32b8c6);
+    font-size: 1.25rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        0 4px 20px rgba(50, 184, 198, 0.18),
+        0 1px 4px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    /* Start hidden — GSAP controls opacity & translateY */
+    opacity: 0;
+    transform: translateY(16px);
+    pointer-events: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.scroll-top-btn ion-icon {
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    pointer-events: none;
+}
+
+.scroll-top-btn:hover {
+    border-color: rgba(50, 184, 198, 0.75);
+    box-shadow:
+        0 6px 28px rgba(50, 184, 198, 0.28),
+        0 2px 6px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    background: rgba(252, 252, 249, 0.28);
+}
+
+.scroll-top-btn:hover ion-icon {
+    transform: translateY(-3px) scale(1.15);
+}
+
+.scroll-top-btn:active {
+    transform: scale(0.93) !important;
+    transition: transform 0.1s ease;
+}
+
+@media (max-width: 767px) {
+    .scroll-top-btn {
+        bottom: 1.25rem;
+        right: 1.25rem;
+        width: 42px;
+        height: 42px;
+        font-size: 1.1rem;
+    }
+}
